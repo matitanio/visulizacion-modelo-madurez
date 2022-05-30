@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+.Grafico {
+  height: 750px;
+  width: 750px;
+  padding-left: 300px;
+}
