@@ -87,11 +87,13 @@ function App() {
     [6,3,3,1,5,2,3,4,2,4,5,1],
   ];
 
+  Ojo con Matias, solia programar bien, ahora no lo se XD
+
   const options = {
     plugins: {
         legend: {
             display: true,
-            position: 'left'
+            position: 'left'  
         }
     }
   };
