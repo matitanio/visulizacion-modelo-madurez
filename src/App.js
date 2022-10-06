@@ -28,18 +28,14 @@ function App() {
   function getData(){
     return {
       labels: [
-    'Practica agile',
-    'Competencia técnica',
-    'Desarrollo de productos',
-    'Lead Time',
-    'Frecuencia de Delivery',
-    'Medición de Outcome',
-    'Liderazgo',
-    'Gestión de la prioridad',
-    'Confianza (seguridad psicológica)',
-    'Flujos de valor',
-    'Estrategia y operativa conectadas',
-    'Gestión del talento'
+        'Excelencia Técnica',
+        'Entorno Humano y Colaborativo',
+        'Agregar Valor',
+        'Desarrollar Capacidades en el Equipo',
+        'Autonomía',
+        'Visión de Negocio',
+        'Visión de Producto',
+        'Generación de acuerdos'
       ],
       datasets: [{
         label: 'My First Dataset',
@@ -51,12 +47,7 @@ function App() {
           mapaColores[valores[3]], 
           mapaColores[valores[4]], 
           mapaColores[valores[5]], 
-          mapaColores[valores[6]],
-          mapaColores[valores[7]],
-          mapaColores[valores[8]],
-          mapaColores[valores[9]],
-          mapaColores[valores[10]],
-          mapaColores[valores[11]]
+          mapaColores[valores[6]]
         ]
       }]
     };
@@ -78,16 +69,15 @@ function App() {
 
   
   const equipos=[
-    [1,2,3,2,5,2,4,6,3,4,5,1],
-    [1,1,4,2,5,6,4,5,3,4,5,1],
-    [6,2,3,2,5,3,3,6,2,4,5,1],
-    [6,2,3,2,5,3,3,6,2,3,5,1],
-    [6,4,3,2,5,3,1,6,2,4,5,1],
-    [6,2,3,3,5,4,3,6,1,1,5,1],
-    [6,3,3,1,5,2,3,4,2,4,5,1],
+    [1,2,3,2,5,2,4,6],
+    [1,1,4,2,5,6,4,5],
+    [6,2,3,2,5,3,3,6],
+    [6,2,3,2,5,3,3,6],
+    [6,4,3,2,5,3,1,6],
+    [6,2,3,3,5,4,3,6],
+    [6,3,3,1,5,2,3,4],
   ];
 
-  Ojo con Matias, solia programar bien, ahora no lo se XD
 
   const options = {
     plugins: {
