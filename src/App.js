@@ -14,7 +14,7 @@ import { PolarArea } from 'react-chartjs-2';
 function App() {
   ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
   let equipoSeleccionado;
-  let valores=[1,2,3,2,5,6,4,6,3,4,5,1];
+  let valores=[3,2,2,1,1,0,4,4,5,1,2,3];
   
   const mapaColores = ['',
   'rgb(255, 0, 0)', //1-Rojo 
@@ -22,7 +22,7 @@ function App() {
   'rgb(255, 255, 0)', //3-amarrillo
   'rgb(63, 127, 0)', //4-verde obscuro
   'rgb(127, 255, 0)', //5-verde claro
-  'rgb(54, 162, 235)' //6-Azul
+  'rgb(54, 162, 235)', //6-Azul
   ];
 
   function getData(){
@@ -33,7 +33,7 @@ function App() {
     'Desarrollo de productos',
     'Lead Time',
     'Frecuencia de Delivery',
-    'Medición de Outcome',
+    'Medición de Outcome (N/A)',
     'Liderazgo',
     'Gestión de la prioridad',
     'Confianza (seguridad psicológica)',
@@ -50,7 +50,7 @@ function App() {
           mapaColores[valores[2]], 
           mapaColores[valores[3]], 
           mapaColores[valores[4]], 
-          mapaColores[valores[5]], 
+          'rgb(181, 178, 178)', 
           mapaColores[valores[6]],
           mapaColores[valores[7]],
           mapaColores[valores[8]],
@@ -78,19 +78,27 @@ function App() {
 
   
   const equipos=[
-    [1,2,3,2,5,2,4,6,3,4,5,1],
-    [1,1,4,2,5,6,4,5,3,4,5,1],
-    [6,2,3,2,5,3,3,6,2,4,5,1],
-    [6,2,3,2,5,3,3,6,2,3,5,1],
-    [6,4,3,2,5,3,1,6,2,4,5,1],
-    [6,2,3,3,5,4,3,6,1,1,5,1],
-    [6,3,3,1,5,2,3,4,2,4,5,1],
+    [1,2,3,2,5,6,4,6,3,4,5,1],
+    [1,2,3,2,5,0,4,6,3,4,5,1],
+    [1,2,3,2,5,0,4,6,3,4,5,1],
+    [1,2,3,2,5,0,4,6,3,4,5,1],
+    [1,2,3,2,5,0,4,6,3,4,5,1],
+    [1,2,3,2,5,0,4,6,3,4,5,1],
+    [1,2,3,2,5,0,4,6,3,4,5,1]
   ];
 
-  Ojo con Matias, solia programar bien, ahora no lo se XD
+
 
   const options = {
-    plugins: {
+    scale: {
+      max:6,
+      min:0,
+      ticks: {
+          stepSize: 1,
+        
+      }
+  }
+    ,plugins: {
         legend: {
             display: true,
             position: 'left'  
@@ -104,13 +112,7 @@ function App() {
         <h1>Mediciones</h1>
         <div>
                <select id="lang" value={equipoSeleccionado} onChange={handleSelectChange}>
-                  <option value="0">Plan de Lealtad</option>
-                  <option value="1">E2E</option>
-                  <option value="2">Remesas</option>
-                  <option value="3">One Click</option>
-                  <option value="4">Motor de Crédito</option>
-                  <option value="5">Domiciliación de Pagos</option>
-                  <option value="6">Sobres Digitales</option>
+                  <option value="0">Fábrica</option>
                </select>
                <p></p>
              
