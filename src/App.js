@@ -14,7 +14,7 @@ import { PolarArea } from 'react-chartjs-2';
 function App() {
   ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
   let equipoSeleccionado;
-  let valores=[3,2,2,1,1,0,4,4,5,1,2,3];
+  let valores=[1,1,0,1,1,3,5,4,4,2,2,3];
   
   const mapaColores = ['',
   'rgb(255, 0, 0)', //1-Rojo 
@@ -28,18 +28,18 @@ function App() {
   function getData(){
     return {
       labels: [
-    'Practica agile',
-    'Competencia técnica',
-    'Desarrollo de productos',
     'Lead Time',
     'Frecuencia de Delivery',
     'Medición de Outcome (N/A)',
-    'Liderazgo',
-    'Gestión de la prioridad',
-    'Confianza (seguridad psicológica)',
     'Flujos de valor',
     'Estrategia y operativa conectadas',
-    'Gestión del talento'
+    'Gestión del talento',
+    'Confianza (seguridad psicológica)',
+    'Gestión de la prioridad',
+    'Liderazgo',
+    'Desarrollo de productos',
+    'Competencia técnica',
+    'Practica agile'
       ],
       datasets: [{
         label: 'My First Dataset',
@@ -50,7 +50,7 @@ function App() {
           mapaColores[valores[2]], 
           mapaColores[valores[3]], 
           mapaColores[valores[4]], 
-          'rgb(181, 178, 178)', 
+          mapaColores[valores[5]], 
           mapaColores[valores[6]],
           mapaColores[valores[7]],
           mapaColores[valores[8]],
