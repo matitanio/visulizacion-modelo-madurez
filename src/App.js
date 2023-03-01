@@ -14,7 +14,7 @@ import { PolarArea } from 'react-chartjs-2';
 function App() {
   ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
   let equipoSeleccionado;
-  let valores=[1,1,0,1,1,3,5,4,4,2,2,3];
+  let valores=[1,1,0,1,2,3,5,4,4,2,2,3];
   
   const mapaColores = ['',
   'rgb(255, 0, 0)', //1-Rojo 
